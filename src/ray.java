@@ -23,8 +23,8 @@ public class ray {
         return origin.add(direction.scale(t));
     }
 
-    public vec3 rayColor(ray r,hittable world){
-    hitRecord rec =new hitRecord();
+   // public vec3 rayColor(ray r,hittable world){
+    //hitRecord rec =new hitRecord();
     //  double t_param =sphereCollision(new vec3(0.0,0.0,-1.0), 0.5, r);
 
     //  if(t_param>0.0){
@@ -32,16 +32,16 @@ public class ray {
 
     //     return new vec3(normalVector.x()+1,normalVector.y()+1,normalVector.z()+1).scale(0.5);
     //  }
-    if(world.hit(r,0, Double.POSITIVE_INFINITY,rec)){
-       System.out.println("yjis"+rec.normal.x());
-       return rec.normal.add(new vec3(1,1,1)).scale(0.5);
-    }
+    //if(world.hit(r,0, Double.POSITIVE_INFINITY,rec)){
+        
+      // return rec.normal.add(new vec3(1,1,1)).scale(0.5);
+    //}
          
     
-       vec3 unitDirection =this.direction().unitVector();
-       double a =0.5*(unitDirection.y()+1.0);
-       return new vec3(1.0,1.0,1.0).scale(1.0-a).add(new vec3(0.5,0.7,1.0).scale(a));
-    }
+       //vec3 unitDirection =this.direction().unitVector();
+       //double a =0.5*(unitDirection.y()+1.0);
+       //return new vec3(1.0,1.0,1.0).scale(1.0-a).add(new vec3(0.5,0.7,1.0).scale(a));
+    //}
 
    /*  public double sphereCollision(vec3 center,double radius,ray r){
         vec3 radiusVector =center.add(r.origin().scale(-1.0));// the oc vector

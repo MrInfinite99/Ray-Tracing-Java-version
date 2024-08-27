@@ -29,6 +29,7 @@ public class hittableList extends hittable{
                 closestSoFar = tempRec.t;
                 rec.t = tempRec.t;
                 rec.normal = tempRec.normal;
+                rec.point =tempRec.point;
 
                  
             }

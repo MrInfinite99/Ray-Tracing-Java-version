@@ -1,4 +1,4 @@
- 
+                               
 public class vec3 {
     private double[] e;
 
@@ -63,5 +63,34 @@ vec3(){};
     public vec3 unitVector(){
         return this.scale(1.0/magnitude());
     }
-     
+
+    public vec3 random(){
+        return new vec3(Math.random(),Math.random(),Math.random());
+    }
+
+    public vec3 random(double min,double max){
+        return new vec3(Math.random()*(max-min)+min,Math.random()*(max-min)+min,Math.random()*(max-min)+min);
+    }
+     public vec3 randomInUnitSphere(){
+        while(true){
+         vec3 p =random( -1.0,1.0);
+         if (p.dot(p) < 1.0) {
+            return p;
+        }
+        }
+     }
+
+     public vec3 randomUnitVector(){
+     return randomInUnitSphere().unitVector(); 
+    
+    }
+
+    public vec3 randomOnHemisphere(vec3 normal){
+        vec3 onUnitSphere =randomUnitVector();
+        if(onUnitSphere.dot(normal)>0.0){
+            return onUnitSphere;
+        }
+        else
+        return onUnitSphere;
+    }
 }

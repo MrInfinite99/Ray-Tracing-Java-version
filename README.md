@@ -1,7 +1,8 @@
-## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+This a simple rendering program written completely in the java language, the rendering is done with the ray tracing technique and the output can be viewed through output.ppm . This project has been inspired by the ray tracing in one week book which is written in c++. the rendrer currently supports anti-aliasing and diffusion. In the future features like multiple material rendering , and advanced features will be added
 
+![Anti-Aliasing](./images/anti-aliasing.png)
+![Diffusion](images/diffusematerial.png)
 ## Folder Structure
 
 The workspace contains two folders by default, where:
@@ -11,8 +12,4 @@ The workspace contains two folders by default, where:
 
 Meanwhile, the compiled output files will be generated in the `bin` folder by default.
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+ 
